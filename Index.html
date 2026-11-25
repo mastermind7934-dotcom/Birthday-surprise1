@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy Birthday My Love ❤️</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Georgia', serif;
+    background: linear-gradient(135deg, #180b20, #481b3d, #9b416b);
+    color: white;
+    text-align: center;
+    overflow-x: hidden;
+}
+
+section {
+    min-height: 100vh;
+    padding: 60px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+h1 {
+    font-size: clamp(35px, 8vw, 65px);
+    color: #ffd6e7;
+    text-shadow: 0 0 20px #ff80b5;
+    animation: glow 2s infinite alternate;
+}
+
+h2 {
+    color: #ffc2dc;
+    margin-bottom: 20px;
+}
+
+p {
+    font-size: 18px;
+    line-height: 1.8;
+    max-width: 650px;
+}
+
+.heart {
+    font-size: 65px;
+    animation: heartbeat 1s infinite;
+    margin: 25px;
+}
+
+button {
+    padding: 15px 35px;
+    background: #ff7eae;
+    color: white;
+    border: none;
+    border-radius: 30px;
+    font-size: 17px;
+    cursor: pointer;
+    margin-top: 30px;
+    box-shadow: 0 0 20px #ff80b5;
+    transition: 0.3s;
+}
+
+button:hover {
+    transform: scale(1.1);
+    background: #ff4f91;
+}
+
+.card {
+    background: rgba(255,255,255,0.1);
+    border: 1px solid rgba(255,255,255,0.3);
+    border-radius: 25px;
+    padding: 35px;
+    max-width: 750px;
+    width: 100%;
+    backdrop-filter: blur(12px);
+    box-shadow: 0 0 30px rgba(255,120,180,0.2);
+}
+
+.letter {
+    font-size: 19px;
+    line-height: 2;
+    color: #ffe5ef;
+}
+
+footer {
+    padding: 30px;
+    color: #ffc2dc;
+}
+
+/* Floating hearts */
+
+.floating {
+    position: fixed;
+    bottom: -50px;
+    font-size: 25px;
+    animation: floatUp linear infinite;
+    opacity: 0.8;
+    pointer-events: none;
+    z-index: 10;
+}
+
+@keyframes floatUp {
+    from {
+        transform: translateY(0) rotate(0deg);
+        opacity: 0;
+    }
+    20% { opacity: 1; }
+    to {
+        transform: translateY(-110vh) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+@keyframes heartbeat {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.2); }
+}
+
+@keyframes glow {
+    from { text-shadow: 0 0 10px #ff80b5; }
+    to { text-shadow: 0 0 35px #ffb6d5; }
+}
+
+/* Balloons */
+
+.balloon {
+    position: fixed;
+    bottom: -150px;
+    font-size: 65px;
+    animation: balloonUp 12s linear infinite;
+    pointer-events: none;
+    z-index: 1;
+}
+
+@keyframes balloonUp {
+    from { transform: translateY(0) rotate(-10deg); }
+    to { transform: translateY(-120vh) rotate(15deg); }
+}
+
+#surprise {
+    display: none;
+    margin-top: 25px;
+    animation: glow 2s infinite alternate;
+}
+
+</style>
+</head>
+
+<body>
+
+<section>
+    <div class="heart">❤️</div>
+    <h1>Happy Birthday<br>My Love!</h1>
+    <p style="margin-top:25px;">
+        To the most beautiful part of my life...
+        Today is all about YOU! 🥹💕
+    </p>
+    <button onclick="document.getElementById('welcome').scrollIntoView({behavior:'smooth'})">
+        Open Your Surprise 💌
+    </button>
+</section>
+
+<section id="welcome">
+    <div class="card">
+        <h2>To My Favourite Person 🌷</h2>
+        <p class="letter">
+            Happy Birthday, my sweetheart! ❤️<br><br>
+            I don't know how to explain how special you are to me.
+            You came into my life and made ordinary moments
+            feel extraordinary. Your smile is my favourite view,
+            your happiness is my favourite wish, and your love
+            is my favourite feeling.<br><br>
+            I'm so lucky to have you in my life.
+        </p>
+        <div class="heart">💗</div>
+    </div>
+</section>
+
+<section>
+    <div class="card">
+        <h2>Why You're So Special ✨</h2>
+        <p class="letter">
+            You're my favourite notification. 💌<br>
+            You're my happiest thought. 🌸<br>
+            You're my comfort after a long day. 🫶<br>
+            You're my reason to smile randomly. 😊<br>
+            You're my today and my favourite tomorrow. ❤️
+        </p>
+    </div>
+</section>
+
+<section>
+    <div class="card">
+        <h2>A Little Promise 💍</h2>
+        <p class="letter">
+            I promise to keep choosing you,
+            to laugh with you, to support your dreams,
+            to stand beside you on difficult days
+            and to celebrate every little happiness with you.<br><br>
+            I don't promise that every day will be perfect,
+            but I promise that my love and efforts will always
+            be genuine.
+        </p>
+    </div>
+</section>
+
+<section>
+    <div class="card">
+        <h2>One Last Surprise 🥺</h2>
+        <p>
+            There's something I want you to know...
+            You mean more to me than words could ever explain.
+        </p>
+
+        <button onclick="showSurprise()">
+            Click For A Surprise ❤️
+        </button>
+
+        <div id="surprise">
+            <div class="heart">💖</div>
+            <h1>I LOVE YOU!</h1>
+            <p>
+                Today, tomorrow, and all the beautiful days ahead.
+                Happy Birthday, my forever favourite person! 🥹
+            </p>
+        </div>
+    </div>
+</section>
+
+<footer>
+    Made with endless love ❤️<br>
+    Just for you, my favourite human. 🌙
+</footer>
+
+<script>
+
+// Floating hearts
+const hearts = ["❤️","💕","💗","💖","💘","🌸","✨"];
+
+function createHeart() {
+    const heart = document.createElement("div");
+    heart.className = "floating";
+    heart.innerHTML = hearts[Math.floor(Math.random()*hearts.length)];
+    heart.style.left = Math.random()*100 + "vw";
+    heart.style.animationDuration = (5+Math.random()*7) + "s";
+    heart.style.fontSize = (15+Math.random()*25) + "px";
+
+    document.body.appendChild(heart);
+
+    setTimeout(() => heart.remove(), 12000);
+}
+
+setInterval(createHeart, 400);
+
+// Floating balloons
+function createBalloon() {
+    const balloon = document.createElement("div");
+    balloon.className = "balloon";
+    balloon.innerHTML = ["🎈","🎈","🎀","💗"][Math.floor(Math.random()*4)];
+    balloon.style.left = Math.random()*100 + "vw";
+    balloon.style.animationDuration = (10+Math.random()*8) + "s";
+
+    document.body.appendChild(balloon);
+
+    setTimeout(() => balloon.remove(), 18000);
+}
+
+setInterval(createBalloon, 1800);
+
+// Surprise
+function showSurprise() {
+    document.getElementById("surprise").style.display = "block";
+    document.getElementById("surprise").scrollIntoView({
+        behavior: "smooth",
+        block: "center"
+    });
+}
+
+</script>
+
+</body>
+</html>
